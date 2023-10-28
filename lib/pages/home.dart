@@ -1,3 +1,4 @@
+import 'package:farmnesia/pages/ble_connect.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -98,9 +99,34 @@ class Home extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                         ),
                     ),
-                  )
+                  ),
+                  Column(
+                    children: [
+                      SizedBox(height: 20), // Untuk memberikan sedikit jarak antara teks dan tombol
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Ble_connect(),
+                          ));
+                        },
+                        child: Container(
+                          width: 200,
+                          height: 50,
+                          color: Colors.blue,
+                          child: Center(
+                            child: Text(
+                              'Connect to BLE',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
-              ) 
+              ),
             ],
           )
         ],
