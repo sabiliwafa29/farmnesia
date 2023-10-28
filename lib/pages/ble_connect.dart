@@ -10,6 +10,7 @@ class Ble_connect extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         title: Text(
           'BLE Connection',
           style: TextStyle(
@@ -21,9 +22,30 @@ class Ble_connect extends StatelessWidget{
           ),
         ),
       ),
-      body: Column(
-        
-      ),
+
+
+
+
+      body: Container(
+        width: 360,
+        height: 710,
+        decoration: ShapeDecoration(
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+        ),
+    ),
+)
+
+
+
+
+
+
+
+
+
+
     );
   }
 }
