@@ -9,15 +9,28 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Farmnesia',
+          'Farmnesia', 
         ),
       ),
       //kolom box welcome
       body: Column(
-        children: [
-          Container(
-            width: 300,
-            height: 150,
+  crossAxisAlignment: CrossAxisAlignment.start, // Menyusun teks dari kiri ke kanan
+  children: [
+    Container(
+      width: 300,
+      height: 150,
+      margin: EdgeInsets.only(left: 40.0), // Mengatur margin kiri untuk teks pertama
+      padding: EdgeInsets.all(20.0), // Menambahkan padding pada teks pertama
+      child: Text(
+        'Welcome',
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 24,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w600,
+          height: 3,
+        ),
+      ),
             decoration: ShapeDecoration(
                 color: Color(0xFFF7FCFF),
                 shape: RoundedRectangleBorder(
@@ -33,17 +46,42 @@ class Home extends StatelessWidget {
                 ],
             ),
           ),
+          
           //kolom box menu
           Column(
             children: [
               Container(
-                
+                margin: EdgeInsets.only(left: 0.0, right: 160.0), // Mengatur margin kiri untuk teks pertama
+                padding: EdgeInsets.only(top: 30.0, bottom: 10.0), // Menambahkan padding pada teks pertama
+                child: Text(
+                  'Menu',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 24,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w600,
+                    height: 0,
+                  ),
+                ),
               ),
               //kolom tampilan amount
               Column(
                 children: [
                   Container(
-
+                    width: 300,
+                    height: 185,
+                    margin: EdgeInsets.only(left: 40.0), // Mengatur margin kiri untuk teks pertama
+                    padding: EdgeInsets.all(20.0), // Menambahkan padding pada teks pertama
+                    decoration: ShapeDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment(-0.94, -0.34),
+                            end: Alignment(0.94, 0.34),
+                            colors: [Color(0xFFA0D3E6), Color(0xFF3DA6D2)],
+                        ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                        ),
+                    ),
                   )
                 ],
               ) 
