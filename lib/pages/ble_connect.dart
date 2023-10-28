@@ -17,7 +17,8 @@ class Ble_connect extends StatelessWidget{
 
       body: Column(
         children: [
-          Container(width: 300, height: 150,)
+          Container(width: 300, height: 150,
+          decoration: ShapeDecoration(color: (0xFFF7FCFF)),)
         ],
       ),
 
