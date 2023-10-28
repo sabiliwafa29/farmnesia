@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
 
-class choice extends StatelessWidget{
+class choice extends StatelessWidget {
   const choice({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Hayo pilih mana',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+      
+    );
+  
   }
-
 }

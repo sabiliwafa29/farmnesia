@@ -1,4 +1,5 @@
 import 'package:farmnesia/pages/ble_connect.dart';
+import 'package:farmnesia/pages/choice_data_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -187,6 +188,45 @@ class Home extends StatelessWidget {
                                 child: Center(
                                   child: Text(
                                     'BLE Connection',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ),
+                                decoration: ShapeDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment(-0.99, -0.13),
+                                    end: Alignment(0.99, 0.13),
+                                    colors: [Color(0xFFC9E0EA), Color(0xFF50B6DC)],
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                    ),
+                                  shadows: [
+                                    BoxShadow(
+                                      color: Color(0x3F000000),
+                                      blurRadius: 4,
+                                      offset: Offset(0, 4),
+                                      spreadRadius: 0,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            //ke choice
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => choice(),
+                                ));
+                              },
+                              child: Container(
+                                width: 300,
+                                height: 60,
+                                margin: EdgeInsets.only(left: 40.0, top: 20.0), // Mengatur margin kiri untuk teks pertama
+                                child: Center(
+                                  child: Text(
+                                    'Pilih Choice',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,
