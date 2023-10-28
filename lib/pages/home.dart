@@ -127,6 +127,25 @@ class Home extends StatelessWidget {
                           ],
                         ),
                       ),
+                      
+                      // child: Container(
+                      //   margin: EdgeInsets.only(left:10.0, right: 130.0, bottom: 100.0),
+                      //   alignment: Alignment.topLeft,
+                      //   width: 10,
+                      //   height: 5,
+                      //   decoration: BoxDecoration(
+                      //     color: Color(0xFFEAE6E1),
+                      //     borderRadius: BorderRadius.circular(15),
+                      //     boxShadow: [
+                      //       BoxShadow(
+                      //         color: Color(0x3F000000),
+                      //         blurRadius: 4,
+                      //         offset: Offset(0, 4),
+                      //         spreadRadius: 0,
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
                     ),
 
                     Column( //amount 
@@ -156,19 +175,18 @@ class Home extends StatelessWidget {
 
                         Column( //tombol next
                           children: [
-                            SizedBox(height: 20), // Untuk memberikan sedikit jarak antara teks dan tombol
                             InkWell(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => BleConnect(),
                                 ));
                               },
                               child: Container(
-                                width: 200,
-                                height: 50,
+                                width: 300,
+                                height: 60,
                                 margin: EdgeInsets.only(left: 40.0, top: 20.0), // Mengatur margin kiri untuk teks pertama
                                 child: Center(
                                   child: Text(
-                                    'Connect to BLE',
+                                    'BLE Connection',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,
@@ -179,7 +197,7 @@ class Home extends StatelessWidget {
                                   gradient: LinearGradient(
                                     begin: Alignment(-0.99, -0.13),
                                     end: Alignment(0.99, 0.13),
-                                    colors: [Color(0xFF50B6DC), Color(0xFFC9E0EA)],
+                                    colors: [Color(0xFFC9E0EA), Color(0xFF50B6DC)],
                                     ),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
