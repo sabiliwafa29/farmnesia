@@ -17,6 +17,31 @@ class Ble_connect extends StatelessWidget{
           ),
         ),
       ),
+      body: Column(
+        children: [
+          SizedBox(height: 20), // Untuk memberikan sedikit jarak antara teks dan tombol
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => not_available_ble(),
+              ));
+            },
+            child: Container(
+              width: 200,
+              height: 50,
+              color: Colors.blue,
+              child: Center(
+                child: Text(
+                  'Connect to BLE',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
