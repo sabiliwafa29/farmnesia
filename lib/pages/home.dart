@@ -21,8 +21,11 @@ class Home extends StatelessWidget {
       width: 300,
       height: 150,
       margin: EdgeInsets.only(left: 40.0), // Mengatur margin kiri untuk teks pertama
-      padding: EdgeInsets.all(20.0), // Menambahkan padding pada teks pertama
-      child: Text(
+      padding: EdgeInsets.only(left: 20.0, right: 20.0), // Menambahkan padding pada teks pertama
+      child: Column( 
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+        Text(
         'Welcome',
         style: TextStyle(
           color: Colors.black,
@@ -31,6 +34,19 @@ class Home extends StatelessWidget {
           fontWeight: FontWeight.w600,
           height: 3,
         ),
+      ),
+      SizedBox(height: 10.0),
+          Text(
+            'Application for Monitoring Goat and the cage',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w300,
+              height: 1.2,
+            ),
+          ),
+        ],
       ),
             decoration: ShapeDecoration(
                 color: Color(0xFFF7FCFF),
