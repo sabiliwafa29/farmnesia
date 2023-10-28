@@ -12,21 +12,43 @@ class Home extends StatelessWidget {
           'Farmnesia',
         ),
       ),
+      //kolom box welcome
       body: Column(
         children: [
           Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/android_lar.png'), // Replace with your image asset path
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: SvgPicture.asset(
-              'assets/vector_1.svg', 
-              width: 10, 
-              height: 10, 
+            width: 300,
+            height: 150,
+            decoration: ShapeDecoration(
+                color: Color(0xFFF7FCFF),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                ),
+                shadows: [
+                    BoxShadow(
+                        color: Color(0x3F000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                    )
+                ],
             ),
           ),
+          //kolom box menu
+          Column(
+            children: [
+              Container(
+                
+              ),
+              //kolom tampilan amount
+              Column(
+                children: [
+                  Container(
+
+                  )
+                ],
+              ) 
+            ],
+          )
         ],
       ),
     );
