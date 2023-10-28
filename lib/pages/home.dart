@@ -7,11 +7,14 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Farmnesia',
+        ),
+      ),
       body: Column(
         children: [
           Container(
-            width: 360, // Replace with your desired width
-            height: 800, // Replace with your desired height
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/android_lar.png'), // Replace with your image asset path
