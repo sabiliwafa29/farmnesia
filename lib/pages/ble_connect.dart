@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
-
+void main() {
+  runApp(const Ble_connect());
+}
 class Ble_connect extends StatelessWidget{
+  const Ble_connect({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,29 +22,7 @@ class Ble_connect extends StatelessWidget{
         ),
       ),
       body: Column(
-        children: [
-          SizedBox(height: 20), // Untuk memberikan sedikit jarak antara teks dan tombol
-          InkWell(
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => not_available_ble(),
-              ));
-            },
-            child: Container(
-              width: 200,
-              height: 50,
-              color: Colors.blue,
-              child: Center(
-                child: Text(
-                  'Connect to BLE',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
+        
       ),
     );
   }
