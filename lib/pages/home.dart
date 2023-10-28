@@ -158,7 +158,7 @@ class Home extends StatelessWidget {
                                 SizedBox(height: 20), // Untuk memberikan sedikit jarak antara teks dan tombol
                                 InkWell(
                                   onTap: () {
-                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Bleconnect(),
+                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => BleConnect(),
                                     ));
                                   },
                                   child: Container(
