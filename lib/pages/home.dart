@@ -100,6 +100,34 @@ class Home extends StatelessWidget {
                         ),
                     ),
                   ),
+
+                Container(
+                    width: 300,
+                    height: 100,
+                    margin: EdgeInsets.only(left: 40.0, top: 20.0), // Mengatur margin kiri untuk teks pertama
+                    padding: EdgeInsets.all(20.0), // Menambahkan padding pada teks pertama
+                    decoration: ShapeDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment(-1.00, -0.00),
+                            end: Alignment(1, 0),
+                            colors: [Color(0xFF50B6DC), Color(0xFFD8E8EE)],
+                        ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                        ),
+                        shadows: [
+                            BoxShadow(
+                                color: Color(0x3F000000),
+                                blurRadius: 4,
+                                offset: Offset(0, 4),
+                                spreadRadius: 0,
+                            )
+                        ],
+                    ),
+                ),
+
+
+
                   Column(
                     children: [
                       SizedBox(height: 20), // Untuk memberikan sedikit jarak antara teks dan tombol
@@ -111,7 +139,7 @@ class Home extends StatelessWidget {
                         child: Container(
                           width: 200,
                           height: 50,
-                          color: Colors.blue,
+                          margin: EdgeInsets.only(left: 40.0, top: 20.0), // Mengatur margin kiri untuk teks pertama
                           child: Center(
                             child: Text(
                               'Connect to BLE',
@@ -121,6 +149,24 @@ class Home extends StatelessWidget {
                               ),
                             ),
                           ),
+                          decoration: ShapeDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment(-0.99, -0.13),
+                              end: Alignment(0.99, 0.13),
+                              colors: [Color(0xFF50B6DC), Color(0xFFC9E0EA)],
+                              ),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                            ),
+                            shadows: [
+                                BoxShadow(
+                                    color: Color(0x3F000000),
+                                    blurRadius: 4,
+                                    offset: Offset(0, 4),
+                                    spreadRadius: 0,
+                                )
+                            ],
+                        ),
                         ),
                       ),
                     ],
