@@ -217,7 +217,7 @@ class Home extends StatelessWidget {
                             //ke choice
                             InkWell(
                               onTap: () {
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => choice(),
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => Choice(),
                                 ));
                               },
                               child: Container(
