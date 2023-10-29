@@ -68,13 +68,13 @@ class Home extends StatelessWidget {
                 margin: EdgeInsets.only(left: 0.0, right: 160.0),
                 padding: EdgeInsets.only(top: 30.0, bottom: 10.0),
                 child: Text(
-                  'Menu',
+                  'Cage 1',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 24,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w600,
-                    height: 0,
+                    height: 5,
                   ),
                 ),
               ),
@@ -101,25 +101,31 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Container(
-                      margin: EdgeInsets.only(left: 10.0, right: 130.0, bottom: 100.0),
-                      alignment: Alignment.topLeft,
-                      width: 10,
-                      height: 5,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFEAE6E1),
-                        borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x3F000000),
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
-                            spreadRadius: 0,
-                          ),
-                        ],
-                      ),
-                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 10.0, right: 130.0, bottom: 100.0),
+                          alignment: Alignment.topLeft,
+                          width: 10,
+                          height: 5,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFEAE6E1),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color(0x3F000000),
+                                blurRadius: 4,
+                                offset: Offset(0, 4),
+                                spreadRadius: 0,
+                              ),
+                            ],
+                           ),
+                        )
+                      ],
+                    )
                   ),
+
                   Column(
                     children: [
                       Container(
