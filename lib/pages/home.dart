@@ -1,11 +1,11 @@
-import 'package:farmnesia/pages/ble_connect.dart';
-import 'package:farmnesia/pages/scan_ocr.dart';
+import 'ble_connect.dart';
+import 'scan_ocr.dart';
 import 'package:flutter/material.dart';
 import 'package:fake_async/fake_async.dart';
 
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
