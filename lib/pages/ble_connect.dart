@@ -18,13 +18,14 @@ class _BleConnectState extends State<BleConnect> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BLE Connection',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 24,
-          fontWeight: FontWeight.w600,
+        title: Text(
+          'BLE Connection',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+          ),
         ),
-      ),
       ),
       body: Column(
         children: [
@@ -39,41 +40,45 @@ class _BleConnectState extends State<BleConnect> {
             ),
             child: Column(
               children: [
-                Container(
-                  width: 300,
-                  height: 70,
-                  margin: EdgeInsets.all(35),
-                  decoration: ShapeDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment(1.00, 0.05),
-                      end: Alignment(-1, -0.05),
-                      colors: [Color(0xFF50B6DC), Color(0xFF96D0E7)],
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      ),
-                    ],
-                  ),
-                  child: Center(
+                InkWell(
+                  onTap: () {
+                    performBleSearch();
+                  },
+                  child: Container(
+                    width: 300,
+                    height: 70,
+                    margin: EdgeInsets.all(15),
+                    child: Center(
                       child: Text(
                         'Search BLE Device Nearby',
                         style: TextStyle(
-                          color: Color(0xFFF7FCFF),
-                          fontSize: 17,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w800,
+                          color: Colors.white,
+                          fontSize: 18,
                         ),
                       ),
                     ),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(-0.99, -0.13),
+                        end: Alignment(0.99, 0.13),
+                        colors: [Color(0xFF50B6DC), Color(0xFFC9E0EA)],
+                        ),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                      ),
+                      shadows: [
+                          BoxShadow(
+                              color: Color(0x3F000000),
+                              blurRadius: 4,
+                              offset: Offset(0, 4),
+                              spreadRadius: 0,
+                          )
+                      ],
+                  ),
+                  ),
                 ),
-                Text(
+
+                const Text(
                   'Near you',
                   style: TextStyle(
                     color: Color(0xFF937D69),
@@ -82,34 +87,42 @@ class _BleConnectState extends State<BleConnect> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
+                Column(
+                  children: connectedDevices.map((deviceID) {
+                    return Container(
+                      width: 300,
+                      height: 70,
+                      margin: EdgeInsets.all(35),
+                      decoration: ShapeDecoration(
+                        color: Color(0xFFF5F5F5),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        shadows: [
+                          BoxShadow(
+                            color: Color(0x3F000000),
+                            blurRadius: 4,
+                            offset: Offset(0, 4),
+                            spreadRadius: 0,
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: Text(
+                          deviceID,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 17,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                ),
               ],
             ),
-          ),
-          Column(
-            children: connectedDevices.map((deviceID) {
-              return Container(
-                width: 300,
-                height: 70,
-                margin: EdgeInsets.all(35),
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                ),
-                child: Center(
-                  child: Text(
-                    deviceID,
-                    style: TextStyle(
-                      color: Colors.black, // Ubah warna teks sesuai kebutuhan
-                      fontSize: 17,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
-              );
-            }).toList(),
           ),
         ],
       ),
@@ -117,17 +130,13 @@ class _BleConnectState extends State<BleConnect> {
   }
 
   void performBleSearch() {
-    // Implementasikan logika pencarian BLE di sini
+    // Implementasikan logika pencarian BLE yang sesungguhnya di sini
     // Misalnya, setelah perangkat terhubung:
     setState(() {
-      connectedDevices.add('Device ID'); // Gantilah 'Device ID' dengan ID perangkat yang terhubung
+      connectedDevices.clear(); // Hapus perangkat yang sebelumnya terhubung
+      connectedDevices.add('Device 1');
+      connectedDevices.add('Device 2');
+      connectedDevices.add('Device 3');
     });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    // Panggil performBleSearch ketika widget diinisialisasi.
-    performBleSearch();
   }
 }

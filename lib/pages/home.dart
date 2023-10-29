@@ -1,4 +1,5 @@
 import 'package:farmnesia/pages/ble_connect.dart';
+import 'package:farmnesia/pages/scan_ocr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -143,6 +144,49 @@ class Home extends StatelessWidget {
                           child: Center(
                             child: Text(
                               'Connect to BLE',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                          decoration: ShapeDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment(-0.99, -0.13),
+                              end: Alignment(0.99, 0.13),
+                              colors: [Color(0xFF50B6DC), Color(0xFFC9E0EA)],
+                              ),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                            ),
+                            shadows: [
+                                BoxShadow(
+                                    color: Color(0x3F000000),
+                                    blurRadius: 4,
+                                    offset: Offset(0, 4),
+                                    spreadRadius: 0,
+                                )
+                            ],
+                        ),
+                        ),
+                      ),
+                    ],
+                  ),
+                   Column(
+                    children: [
+                      SizedBox(height: 20), // Untuk memberikan sedikit jarak antara teks dan tombol
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Scan(),
+                          ));
+                        },
+                        child: Container(
+                          width: 200,
+                          height: 50,
+                          margin: EdgeInsets.only(left: 40.0, top: 20.0), // Mengatur margin kiri untuk teks pertama
+                          child: Center(
+                            child: Text(
+                              'Camera',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
