@@ -334,10 +334,5 @@ packages:
     source: hosted
     version: "0.1.4-beta"
 sdks:
-<<<<<<< HEAD
-  dart: ">=3.1.0-185.0.dev <4.0.0"
-  flutter: ">=3.7.0"
-=======
   dart: ">=3.1.5 <4.0.0"
-  flutter: ">=2.10.0"
->>>>>>> 4fd62c1e2454602ad649f66002a1943bd1619950
+  flutter: ">=3.7.0"
