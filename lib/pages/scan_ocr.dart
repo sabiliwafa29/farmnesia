@@ -17,6 +17,7 @@ class Scan extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Text Recognition Flutter',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -97,33 +98,33 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
               ),
               backgroundColor: _isPermissionGranted ? Colors.transparent : null,
               body: _isPermissionGranted
-                  ? Column(
-                      children: [
-                        Expanded(
-                          child: Container(),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.only(bottom: 30.0),
-                          child: Center(
-                            child: ElevatedButton(
-                              onPressed: _scanImage,
-                              child: const Text('Scan text'),
-                            ),
+                ? Column(
+                    children: [
+                      Expanded(
+                        child: Container(),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.only(bottom: 30.0),
+                        child: Center(
+                          child: ElevatedButton(
+                            onPressed: _scanImage,
+                            child: const Text('Scan text'),
                           ),
                         ),
-                      ],
-                    )
-                  : Center(
-                      child: Container(
-                        padding: const EdgeInsets.only(left: 24.0, right: 24.0),
-                        child: const Text(
-                          'Camera permission denied',
-                          textAlign: TextAlign.center,
-                        ),
                       ),
+                    ],
+                  )
+                : Center(
+                  child: Container(
+                    padding: const EdgeInsets.only(left: 24.0, right: 24.0),
+                    child: const Text(
+                      'Camera permission denied',
+                      textAlign: TextAlign.center,
                     ),
-            ),
-          ],
+                  ),
+                ),
+              ),
+            ],
         );
       },
     );
