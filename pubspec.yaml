@@ -7,7 +7,7 @@ environment:
   sdk: '>=2.18.2 <3.0.0'
 
 dependencies:
-  camera: ^0.10.0+3
+  camera: ^0.10.5+5
   flutter:
     sdk: flutter
   google_mlkit_text_recognition: ^0.10.0

@@ -90,7 +90,7 @@ class Choice extends StatelessWidget
             transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-3.14),
             child: Container
             (
-                decoration: ShapeDecoration
+                decoration: ShapeDecoration  
                 (
                     gradient: LinearGradient
                     (
