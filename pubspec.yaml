@@ -1,17 +1,20 @@
 name: farmnesia
-description: A sample Flutter project that use text recognition.
+description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
+  sdk: ">=2.10.0 <3.0.0"
 
 dependencies:
-  camera: ^0.10.0+3
-  flutter:
+  flutter :
     sdk: flutter
   google_mlkit_text_recognition: ^0.4.0
   permission_handler: ^10.2.0
+  permission_handler_platform_interface: ^3.12.0 
+  cupertino_icons: ^1.0.2
+  camera: ^0.10.0+3
+  firebase_ml_vision: 0.12.0+3
 
 dev_dependencies:
   flutter_test:
@@ -20,3 +23,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
