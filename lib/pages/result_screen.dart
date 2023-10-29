@@ -16,4 +16,3 @@ class ResultScreen extends StatelessWidget {
         ),
       );
 }
-//https://github.com/svprdga/Text-Recognition-Flutter/tree/master

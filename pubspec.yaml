@@ -4,14 +4,15 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
+  sdk: '>=3.1.5 <4.0.0'
 
 dependencies:
-  camera: ^0.10.0+3
   flutter:
     sdk: flutter
-  google_mlkit_text_recognition: ^0.10.0
-  permission_handler: ^11.0.1
+  google_mlkit_text_recognition: ^0.4.0
+  permission_handler: ^10.2.0
+  cupertino_icons: ^1.0.2
+  camera: ^0.10.0+3
 
 dev_dependencies:
   flutter_test:
