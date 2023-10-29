@@ -6,12 +6,15 @@ import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart
 import 'package:permission_handler/permission_handler.dart';
 import 'package:farmnesia/pages/result_screen.dart';
 
+
+
+
 void main() {
   runApp(const Scan());
 }
 
 class Scan extends StatelessWidget {
-  const Scan({super.key});
+  const Scan({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,11 +46,12 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
 
   @override
   void initState() {
-    super.initState();
-    WidgetsBinding.instance.addObserver(this);
+  super.initState();
+  WidgetsBinding.instance.addObserver(this);
 
-    _future = _requestCameraPermission();
-  }
+  _future = _requestCameraPermission();
+}
+
 
   @override
   void dispose() {
@@ -131,9 +135,15 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
   }
 
   Future<void> _requestCameraPermission() async {
-    final status = await Permission.camera.request();
-    _isPermissionGranted = status == PermissionStatus.granted;
+  final status = await Permission.camera.request();
+  if (status.isGranted) {
+    // Izin diberikan.
+    // Sekarang Anda dapat mengakses kamera.
+  } else {
+    // Izin ditolak. Tindakan selanjutnya sesuai dengan aplikasi Anda.
   }
+}
+
 
   void _startCamera() {
     if (_cameraController != null) {
@@ -168,20 +178,20 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
   }
 
   Future<void> _cameraSelected(CameraDescription camera) async {
-    _cameraController = CameraController(
-      camera,
-      ResolutionPreset.max,
-      enableAudio: false,
-    );
+  _cameraController = CameraController(
+    camera,
+    ResolutionPreset.max,
+    enableAudio: false,
+  );
 
-    await _cameraController!.initialize();
-    await _cameraController!.setFlashMode(FlashMode.off);
+  await _cameraController?.initialize();
+  await _cameraController?.setFlashMode(FlashMode.off);
 
-    if (!mounted) {
-      return;
-    }
-    setState(() {});
+  if (!mounted) {
+    return;
   }
+  setState(() {});
+}
 
   Future<void> _scanImage() async {
     if (_cameraController == null) return;
