@@ -21,6 +21,20 @@ class Home extends StatelessWidget {
             height: 150,
             margin: EdgeInsets.only(left: 40.0),
             padding: EdgeInsets.only(left: 20.0, right: 20.0),
+            decoration: ShapeDecoration(
+              color: Color(0xFFF7FCFF),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+              shadows: [
+                BoxShadow(
+                  color: Color(0x3F000000),
+                  blurRadius: 4,
+                  offset: Offset(0, 4),
+                  spreadRadius: 0,
+                )
+              ],
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -47,34 +61,19 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
-            decoration: ShapeDecoration(
-              color: Color(0xFFF7FCFF),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
-              shadows: [
-                BoxShadow(
-                  color: Color(0x3F000000),
-                  blurRadius: 4,
-                  offset: Offset(0, 4),
-                  spreadRadius: 0,
-                )
-              ],
-            ),
           ),
           Column(
             children: [
               Container(
-                margin: EdgeInsets.only(left: 0.0, right: 160.0),
-                padding: EdgeInsets.only(top: 30.0, bottom: 10.0),
+                margin: EdgeInsets.only(left: 0.0, right: 180.0),
+                padding: EdgeInsets.only(top: 20,bottom: 10.0),
                 child: Text(
-                  'Cage 1',
+                  'Menu',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 24,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w600,
-                    height: 5,
                   ),
                 ),
               ),
@@ -102,13 +101,11 @@ class Home extends StatelessWidget {
                       ],
                     ),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(left: 10.0, right: 130.0, bottom: 100.0),
-                          alignment: Alignment.topLeft,
-                          width: 10,
-                          height: 5,
+                          margin: EdgeInsets.only(right: 170.0, bottom: 100.0),
+                          width: 80,
+                          height: 30,
                           decoration: BoxDecoration(
                             color: Color(0xFFEAE6E1),
                             borderRadius: BorderRadius.circular(15),
@@ -120,7 +117,21 @@ class Home extends StatelessWidget {
                                 spreadRadius: 0,
                               ),
                             ],
-                           ),
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              child: Text(
+                                '90^',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 50,
+                                  
+                                ),
+                              ),
+                            ),
+                          ],
                         )
                       ],
                     )
@@ -152,15 +163,15 @@ class Home extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          SizedBox(height: 20),
                           InkWell(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(builder: (context) => BleConnect(),));
                             },
                             child: Container(
-                              width: 200,
+                              width: 300,
                               height: 50,
-                              margin: EdgeInsets.only(left: 40.0, top: 20.0),
+                              margin: EdgeInsets.only(left: 10.0, top: 20.0),
+                              
                               child: Center(
                                 child: Text(
                                   'Connect to BLE',
@@ -172,8 +183,6 @@ class Home extends StatelessWidget {
                               ),
                               decoration: ShapeDecoration(
                                 gradient: LinearGradient(
-                                  begin: Alignment(-0.99, -0.13),
-                                  end: Alignment(0.99, 0.13),
                                   colors: [Color(0xFF50B6DC), Color(0xFFC9E0EA)],
                                 ),
                                 shape: RoundedRectangleBorder(
@@ -190,11 +199,6 @@ class Home extends StatelessWidget {
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(height: 20),
                           InkWell(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(builder: (context) => Scan()));
