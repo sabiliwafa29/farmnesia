@@ -5,7 +5,7 @@ import 'package:fake_async/fake_async.dart';
 
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
