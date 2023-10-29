@@ -191,7 +191,7 @@ class Home extends StatelessWidget {
                           SizedBox(height: 20),
                           InkWell(
                             onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => Scan(),));
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => Scan()));
                             },
                             child: Container(
                               width: 200,
