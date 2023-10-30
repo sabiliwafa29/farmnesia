@@ -77,6 +77,7 @@ class Home extends StatelessWidget {
               ),
               Column( 
                 children: [
+<<<<<<< HEAD
                  Container( // Kotak biru menu kandang1
   width: 300,
   height: 185,
@@ -141,6 +142,71 @@ class Home extends StatelessWidget {
   ),
 ),
 
+=======
+                  Container( // Kotak biru menu kandang1
+                    width: 300,
+                    height: 185,
+                    margin: EdgeInsets.only(left: 40.0, bottom: 20),
+                    padding: EdgeInsets.all(20.0),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(-0.94, -0.34),
+                        end: Alignment(0.94, 0.34),
+                        colors: [Color(0xFFA0D3E6), Color(0xFF3DA6D2)],
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x3F000000),
+                          blurRadius: 4,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        ),
+                      ],
+                    ),
+                    child: Column( // Kotak coklat kandang 1
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(right: 180,bottom: 10.0), // Mengganti margin right dengan bottom
+                          padding: EdgeInsets.all(2),
+                          width: 80,
+                          height: 30,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFEAE6E1),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color(0x3F000000),
+                                blurRadius: 4,
+                                offset: Offset(0, 4),
+                                spreadRadius: 0,
+                              ),
+                            ],
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Kandang 1',
+                              style: TextStyle(
+                                color: Colors.brown,
+                                fontSize: 12,
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container( // Kotak untuk angka "90^"
+                          child: Text(
+                            '90',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 50,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+>>>>>>> 6d25ec071e891e503d3db23959d7f42ecfa65114
 
                   Column( //box biru 2
                     children: [
