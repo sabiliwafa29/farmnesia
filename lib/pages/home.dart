@@ -77,7 +77,6 @@ class Home extends StatelessWidget {
               ),
               Column( 
                 children: [
-<<<<<<< HEAD
                  Container( // Kotak biru menu kandang1
   width: 300,
   height: 185,
@@ -142,7 +141,6 @@ class Home extends StatelessWidget {
   ),
 ),
 
-=======
                   Container( // Kotak biru menu kandang1
                     width: 300,
                     height: 185,
@@ -206,7 +204,6 @@ class Home extends StatelessWidget {
                       ],
                     ),
                   ),
->>>>>>> 6d25ec071e891e503d3db23959d7f42ecfa65114
 
                   Column( //box biru 2
                     children: [
