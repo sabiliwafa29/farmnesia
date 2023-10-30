@@ -77,9 +77,9 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              Column( //kotak biru menu kandang1
+              Column( 
                 children: [
-                  Container(
+                  Container( // Kotak biru menu kandang1
                     width: 300,
                     height: 185,
                     margin: EdgeInsets.only(left: 40.0, bottom: 20),
@@ -100,10 +100,10 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Column( //kotak coklat kandang 1
+                    child: Column( // Kotak coklat kandang 1
                       children: [
                         Container(
-                          margin: EdgeInsets.only(right: 170.0, bottom: 100.0),
+                          margin: EdgeInsets.only(right: 180,bottom: 10.0), // Mengganti margin right dengan bottom
                           padding: EdgeInsets.all(2),
                           width: 80,
                           height: 30,
@@ -130,10 +130,7 @@ class Home extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.green,
-                          ),
+                        Container( // Kotak untuk angka "90^"
                           child: Text(
                             '90',
                             style: TextStyle(
