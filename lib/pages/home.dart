@@ -130,24 +130,20 @@ class Home extends StatelessWidget {
                             ),
                           ),
                         ),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                          ),
+                          child: Text(
+                            '90',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 50,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
-                     Column(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Colors.green,
-                              ),
-                              child: Text(
-                                '90^',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 50,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
                   ),
 
                   Column( //box biru 2
