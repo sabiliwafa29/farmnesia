@@ -1,8 +1,6 @@
 import 'ble_connect.dart';
 import 'scan_ocr.dart';
 import 'package:flutter/material.dart';
-// import 'package:fake_async/fake_async.dart';
-
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -131,11 +129,8 @@ class Home extends StatelessWidget {
         ),
       ),
       Container( // Kotak untuk angka "90^"
-        decoration: BoxDecoration(
-          color: Colors.green,
-        ),
         child: Text(
-          '90^',
+          '90',
           style: TextStyle(
             color: Colors.white,
             fontSize: 50,
