@@ -137,8 +137,7 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
   Future<void> _requestCameraPermission() async {
   final status = await Permission.camera.request();
   if (status.isGranted) {
-    // Izin diberikan.
-    // Sekarang Anda dapat mengakses kamera.
+    _startCamera();
   } else {
     // Izin ditolak. Tindakan selanjutnya sesuai dengan aplikasi Anda.
   }
