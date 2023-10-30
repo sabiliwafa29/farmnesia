@@ -5,7 +5,7 @@ void main() {
 }
 
 class BleConnect extends StatefulWidget {
-  const BleConnect({Key? key});
+  const BleConnect({super.key});
 
   @override
   _BleConnectState createState() => _BleConnectState();

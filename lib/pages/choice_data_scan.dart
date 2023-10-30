@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Choice extends StatelessWidget 
 {
-  const Choice({super.key});
+  const Choice({Key? key}) : super(key: key);
   
   get child => null;
 
