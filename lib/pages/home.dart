@@ -77,9 +77,9 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              Column( //kotak biru menu kandang1
+              Column( 
                 children: [
-                  Container(
+                  Container( //kotak biru menu kandang1
                     width: 300,
                     height: 185,
                     margin: EdgeInsets.only(left: 40.0, bottom: 20),
