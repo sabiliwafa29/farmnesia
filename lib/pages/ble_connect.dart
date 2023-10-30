@@ -1,3 +1,4 @@
+import 'package:farmnesia/pages/choice_data_scan.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,8 @@ class BleConnect extends StatefulWidget {
 
   @override
   _BleConnectState createState() => _BleConnectState();
+
+  static map(InkWell Function(dynamic deviceID) param0) {}
 }
 
 class _BleConnectState extends State<BleConnect> {
@@ -89,38 +92,42 @@ class _BleConnectState extends State<BleConnect> {
                 ),
                 Column(
                   children: connectedDevices.map((deviceID) {
-                    return Container(
-                      width: 300,
-                      height: 70,
-                      margin: EdgeInsets.all(35),
-                      decoration: ShapeDecoration(
-                        color: Color(0xFFF5F5F5),
-                        shape: RoundedRectangleBorder(
+                    return InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Choice()));
+                      },
+                      child: Container(
+                        width: 300,
+                        height: 70,
+                        margin: EdgeInsets.all(10), // Mengurangi margin agar lebih pas
+                        decoration: BoxDecoration(
+                          color: Color(0xFFF5F5F5),
                           borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0x3F000000),
+                              blurRadius: 4,
+                              offset: Offset(0, 4),
+                              spreadRadius: 0,
+                            ),
+                          ],
                         ),
-                        shadows: [
-                          BoxShadow(
-                            color: Color(0x3F000000),
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
-                            spreadRadius: 0,
-                          ),
-                        ],
-                      ),
-                      child: Center(
-                        child: Text(
-                          deviceID,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 17,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
+                        child: Center(
+                          child: Text(
+                            deviceID,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 17,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                         ),
                       ),
                     );
                   }).toList(),
                 ),
+
               ],
             ),
           ),
