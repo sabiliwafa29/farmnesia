@@ -140,10 +140,6 @@ class Home extends StatelessWidget {
     ],
   ),
 ),
-<<<<<<< HEAD
-=======
-
->>>>>>> 6598109bbc507357298694d14dc8590d402c612f
                   Container( // Kotak biru menu kandang1
                     width: 300,
                     height: 185,
