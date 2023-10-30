@@ -1,11 +1,11 @@
 import 'ble_connect.dart';
 import 'scan_ocr.dart';
 import 'package:flutter/material.dart';
-import 'package:fake_async/fake_async.dart';
+// import 'package:fake_async/fake_async.dart';
 
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +77,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              Column(
+              Column( //kotak biru menu kandang1
                 children: [
                   Container(
                     width: 300,
@@ -100,10 +100,11 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Column(
+                    child: Column( //kotak coklat kandang 1
                       children: [
                         Container(
                           margin: EdgeInsets.only(right: 170.0, bottom: 100.0),
+                          padding: EdgeInsets.all(2),
                           width: 80,
                           height: 30,
                           decoration: BoxDecoration(
@@ -118,26 +119,38 @@ class Home extends StatelessWidget {
                               ),
                             ],
                           ),
+                          child: Center(
+                            child: Text(
+                              'Kandang 1',
+                              style: TextStyle(
+                                color: Colors.brown,
+                                fontSize: 12,
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
                         ),
                         Column(
                           children: [
                             Container(
+                              decoration: BoxDecoration(
+                                color: Colors.green,
+                              ),
                               child: Text(
                                 '90^',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 50,
-                                  
                                 ),
                               ),
                             ),
                           ],
-                        )
+                        ),
                       ],
-                    )
+                    ),
                   ),
 
-                  Column(
+                  Column( //box biru 2
                     children: [
                       Container(
                         width: 300,
@@ -170,8 +183,7 @@ class Home extends StatelessWidget {
                             child: Container(
                               width: 300,
                               height: 50,
-                              margin: EdgeInsets.only(left: 10.0, top: 20.0),
-                              
+                              margin: EdgeInsets.only(left: 40.0, top: 20.0),
                               child: Center(
                                 child: Text(
                                   'Connect to BLE',
@@ -204,7 +216,7 @@ class Home extends StatelessWidget {
                               Navigator.of(context).push(MaterialPageRoute(builder: (context) => Scan()));
                             },
                             child: Container(
-                              width: 200,
+                              width: 300,
                               height: 50,
                               margin: EdgeInsets.only(left: 40.0, top: 20.0),
                               child: Center(
