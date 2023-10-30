@@ -129,10 +129,7 @@ class Home extends StatelessWidget {
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                     Column(
+                          Column(
                           children: [
                             Container(
                               decoration: BoxDecoration(
@@ -148,6 +145,10 @@ class Home extends StatelessWidget {
                             ),
                           ],
                         ),
+                        ),
+                      ],
+                    ),
+                     
                   ),
 
                   Column( //box biru 2
