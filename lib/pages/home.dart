@@ -1,8 +1,6 @@
 import 'package:farmnesia/pages/ble_connect.dart';
 import 'package:farmnesia/pages/scan_ocr.dart';
 import 'package:flutter/material.dart';
-import 'package:fake_async/fake_async.dart';
-
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -62,11 +60,12 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
+
           Column(
             children: [
               Container(
-                margin: EdgeInsets.only(left: 0.0, right: 160.0),
-                padding: EdgeInsets.only(top: 30.0, bottom: 10.0),
+                margin: EdgeInsets.only(left: 50.0, right: 160.0),
+                padding: EdgeInsets.only(top: 50.0, bottom: 10.0),
                 child: Text(
                   'Cage 1',
                   style: TextStyle(
@@ -78,13 +77,14 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              Column(
-                children: [
-                  Container(
+
+            Column(
+              children: [
+                Container(
                     width: 300,
                     height: 185,
-                    margin: EdgeInsets.only(left: 40.0, bottom: 20),
-                    padding: EdgeInsets.all(20.0),
+                    margin: EdgeInsets.only(left: 40.0, bottom: 10),
+                    padding: EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment(-0.94, -0.34),
@@ -105,10 +105,10 @@ class Home extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(left: 10.0, right: 130.0, bottom: 100.0),
+                          margin: EdgeInsets.only(left: 10.0, right: 130.0, bottom: 50.0, top: 05.0),
                           alignment: Alignment.topLeft,
-                          width: 10,
-                          height: 5,
+                          width: 120,
+                          height: 50,
                           decoration: BoxDecoration(
                             color: Color(0xFFEAE6E1),
                             borderRadius: BorderRadius.circular(15),
@@ -192,6 +192,7 @@ class Home extends StatelessWidget {
                           ),
                         ],
                       ),
+
                       Column(
                         children: [
                           SizedBox(height: 20),
@@ -240,7 +241,7 @@ class Home extends StatelessWidget {
               ),
             ],
           ),
-        ],
+        ],//container
       ),
     );
   }
